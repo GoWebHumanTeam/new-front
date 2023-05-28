@@ -95,24 +95,32 @@ function Reservation(){
     const orderCheck = async (e) => {
         e.preventDefault();
 
-        await axios
-            .post("/api/reservation" , {
-                senderName:senderName,
-                senderTel:senderTel,
-                addressName: addressName,
-                addressTel: addressTel,
-                startingPoint: startingPoint,
-                destination: destination,
-                postDescription: postDescription,
-                weight : weight,
-                quantity: quantity
-            }) 
-            .then(()=>{
-                navigate('/result');
-            })
-            .catch((error)=>{
-                console.log(error);
-            })
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:8000/api/reservation/post');
+        xhr.withCredentials = true;
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    navigate('/result');
+                } else {
+                    console.log('Error:', xhr.status);
+                }
+            }
+        };
+        xhr.send(JSON.stringify({ 
+            sender_name:senderName,
+            sender_tel:senderTel,
+            address_name: addressName,
+            address_tel: addressTel,
+            starting_point: startingPoint,
+            destination: destination,
+            post_description: postDescription,
+            weight : weight,
+            quantity: quantity
+         }));
     }
 
     return(   
