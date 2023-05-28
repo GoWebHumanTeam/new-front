@@ -1,7 +1,7 @@
 .outer {
     height: 100vh;
-    overflow-y: hidden;
-}
+    overflow-y: visible;
+  }s
 
 /*화면에서 스크롤바 안보이게 */
 ::-webkit-scrollbar {
@@ -11,7 +11,7 @@
 .inner {
     height: 100vh;
     width: 130%;
-    color: white
+    color: rgb(0, 0, 0)
 }
 
 .about-us {
@@ -73,6 +73,8 @@
     display: inline-block;
     justify-content: center;
     align-items: center;
+    margin-top : 400px;
+    margin-bottom: 20px;
   }
 
 .white_img_drone {

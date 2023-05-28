@@ -145,8 +145,14 @@ function Introduction() {
             <div className="inner about-us">
                 <p style={{marginTop: '50px', color:"white"}}>About Gachon Express</p>
                 <p style={{fontSize: '25px'}}><h1> About Us</h1></p>
-                <p><AboutUs /></p>
-                
+                <div style={{fontSize: '25px'}}>
+                    <p>Gachon Express is a drone delivery service.</p>
+                    <p>We aim to revolutionize logistics delivery.</p>
+                    <br/>
+                    <p>G-express can provide accurate delivery time and convenience.</p>
+                    <p>We are the first campus drone delivery service in Korea.</p>
+                    <p>We ship your item to the place you want in Gachon University.</p>
+                </div>
                 <p className='about-us-imgs-container'>
                     <p className="about-us-imgs">
                         <img src={aboutUs_gcu} alt="gcu img" />
@@ -155,53 +161,54 @@ function Introduction() {
                 </p>
 
             </div>
-            <div  ref={searchRef} />
+            <div  ref={searchRef}/>
             <div className="inner about-drone">
-                <p style={{marginTop: '-70px', color:"white"}}>About Gachon Express</p>
+                <p style={{marginTop: '-70px', color:"black", fontSize: "30px"}}>Gachon Express</p>
                 <p style={{marginTop: '0px', fontSize: '25px'}}><h1> About Drones</h1></p>
                 <br/>
                 <br/>
-                <p>
-                {isHovering[0] ? 
-                    <img className="drone_img_mouse_enter" src={drone_img_1} alt="drone_img_1" 
-                        onMouseEnter={() => handleMouseOver(0)}
-                        onMouseLeave={() => handleMouseOut(0)}
-                        onClick={() => {handleMouseClick('0'); dispatch(increment0());}}/>
-                   : <img className="drone_img_mouse_leave" src={drone_img_1} alt="drone_img_1" 
-                        onMouseEnter={() => handleMouseOver(0)}
-                        onMouseLeave={() => handleMouseOut(0)}
-                        onClick={() => {handleMouseClick('0'); dispatch(increment0());}}/>}
+                <div>
+
+                        {isHovering[0] ? 
+                            <img className="drone_img_mouse_enter" src={drone_img_1} alt="drone_img_1" 
+                                onMouseEnter={() => handleMouseOver(0)}
+                                onMouseLeave={() => handleMouseOut(0)}
+                                onClick={() => {handleMouseClick('0'); dispatch(increment0());}}/>
+                        : <img className="drone_img_mouse_leave" src={drone_img_1} alt="drone_img_1" 
+                                onMouseEnter={() => handleMouseOver(0)}
+                                onMouseLeave={() => handleMouseOut(0)}
+                                onClick={() => {handleMouseClick('0'); dispatch(increment0());}}/>}
+                                
+                        {isHovering[1] ? 
+                            <img className="drone_img_mouse_enter" src={drone_img_2} alt="drone_img_2" 
+                                onMouseEnter={() => handleMouseOver(1)}
+                                onMouseLeave={() => handleMouseOut(1)}
+                                onClick={() => {handleMouseClick('1'); dispatch(increment1());}}/>
+                            : <img className="drone_img_mouse_leave" src={drone_img_2} alt="drone_img_2" 
+                                onMouseEnter={() => handleMouseOver(1)}
+                                onMouseLeave={() => handleMouseOut(1)}
+                                onClick={() => {handleMouseClick('1'); dispatch(increment1());}}/>}
                         
-                {isHovering[1] ? 
-                    <img className="drone_img_mouse_enter" src={drone_img_2} alt="drone_img_2" 
-                        onMouseEnter={() => handleMouseOver(1)}
-                        onMouseLeave={() => handleMouseOut(1)}
-                        onClick={() => {handleMouseClick('1'); dispatch(increment1());}}/>
-                    : <img className="drone_img_mouse_leave" src={drone_img_2} alt="drone_img_2" 
-                        onMouseEnter={() => handleMouseOver(1)}
-                        onMouseLeave={() => handleMouseOut(1)}
-                        onClick={() => {handleMouseClick('1'); dispatch(increment1());}}/>}
-                
-                {isHovering[2] ? 
-                    <img className="drone_img_mouse_enter" src={drone_img_3} alt="drone_img_3" 
-                        onMouseEnter={() => handleMouseOver(2)}
-                        onMouseLeave={() => handleMouseOut(2)}
-                        onClick={() => {handleMouseClick('2'); dispatch(increment2());}}/>
-                    : <img className="drone_img_mouse_leave" src={drone_img_3} alt="drone_img_3" 
-                        onMouseEnter={() => handleMouseOver(2)}
-                        onMouseLeave={() => handleMouseOut(2)}
-                        onClick={() => {handleMouseClick('2'); dispatch(increment2());}}/>}
-                            
-                {isHovering[3] ? 
-                    <img className="drone_img_mouse_enter" src={drone_img_4} alt="drone_img_4" 
-                        onMouseEnter={() => handleMouseOver(3)}
-                        onMouseLeave={() => handleMouseOut(3)}
-                        onClick={() => {handleMouseClick('3'); dispatch(increment3());}}/>
-                    : <img className="drone_img_mouse_leave" src={drone_img_4} alt="drone_img_4" 
-                        onMouseEnter={() => handleMouseOver(3)}
-                        onMouseLeave={() => handleMouseOut(3)}
-                        onClick={() => {handleMouseClick('3'); dispatch(increment3());}}/>} 
-                </p>
+                        {isHovering[2] ? 
+                            <img className="drone_img_mouse_enter" src={drone_img_3} alt="drone_img_3" 
+                                onMouseEnter={() => handleMouseOver(2)}
+                                onMouseLeave={() => handleMouseOut(2)}
+                                onClick={() => {handleMouseClick('2'); dispatch(increment2());}}/>
+                            : <img className="drone_img_mouse_leave" src={drone_img_3} alt="drone_img_3" 
+                                onMouseEnter={() => handleMouseOver(2)}
+                                onMouseLeave={() => handleMouseOut(2)}
+                                onClick={() => {handleMouseClick('2'); dispatch(increment2());}}/>}
+                                    
+                        {isHovering[3] ? 
+                            <img className="drone_img_mouse_enter" src={drone_img_4} alt="drone_img_4" 
+                                onMouseEnter={() => handleMouseOver(3)}
+                                onMouseLeave={() => handleMouseOut(3)}
+                                onClick={() => {handleMouseClick('3'); dispatch(increment3());}}/>
+                            : <img className="drone_img_mouse_leave" src={drone_img_4} alt="drone_img_4" 
+                                onMouseEnter={() => handleMouseOver(3)}
+                                onMouseLeave={() => handleMouseOut(3)}
+                                onClick={() => {handleMouseClick('3'); dispatch(increment3());}}/>} 
+                </div>
                 <div className="white_img"> 
                     <div className='white_img_txt'>
                         <ShowDroneInfo/>
