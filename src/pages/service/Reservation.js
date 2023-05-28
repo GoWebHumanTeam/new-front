@@ -117,8 +117,8 @@ function Reservation(){
 
     return(   
         <div className="res_background">
-             <div className="home-container">
-                <img className="home-image" src={background} alt="background"/> 
+             <div className="image-container">
+                <img className="reservation-image" src={background} alt="background"/> 
                 
             <div className="res_sender">
             <h1>Reservation</h1>
@@ -127,25 +127,25 @@ function Reservation(){
                     required
                     label="Sender Name"
                     onChange={handleOnSenderName}
-                /> <div className="margin"></div>
+                /> 
 
                 <TextField
                     required
                     label="Sender Tel"
                     onChange={handleOnSenderTel}
-                />  <div className="margin"></div> <div className="margin"></div>
+                />   
                 
                 <TextField
                     required
                     label="Addressee Name"
                     onChange={handleOnAddressName}
-                />  <div className="margin"></div>
+                />  
             
                 <TextField
                     required
                     label="Addressee Tel"
                     onChange={handleOnAddressTel}
-                />  <div className="margin"></div> <div className="margin"></div> <div className="margin"></div>
+                />    
                 
                 <div className="place">
                 <img className="map-image" src={campusmap} alt="campusmap"/>    
@@ -163,7 +163,6 @@ function Reservation(){
                     </MenuItem>
                     ))}
                 </TextField>
-                <div className="margin"></div>
               
 
                 <TextField
@@ -181,13 +180,12 @@ function Reservation(){
                     ))}
                 </TextField>
                 </div>
-                <div className="margin"></div><div className="margin"></div> <div className="margin"></div>
-            
+                
                 <TextField
                     required
                     label="Post Description"
                     onChange={handleOnPostDescription}
-                />  <div className="margin"></div>
+                /> 
 
                 <TextField
                     required
@@ -196,7 +194,7 @@ function Reservation(){
                     InputProps={{
                         endAdornment: <InputAdornment position="end">kg</InputAdornment>,
                     }}
-                /> <div className="margin"></div>
+                /> 
                
                <TextField
                     required label="Quantity"
