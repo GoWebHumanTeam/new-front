@@ -10,7 +10,7 @@ import './Login.css';
 function Login() {
   const navigate = useNavigate();
 
-    const baseUrl = "http://localhost:8000";
+    const baseUrl = "http://localhost:80";
  
 
   const [name, setName] = useState('');
@@ -27,22 +27,23 @@ function Login() {
   }
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-
-      await axios
-          .post(baseUrl + "/api/login" ,{
-            name:name,
-            studentid:studentID,
-          })
-          .then((response)=>{
-            console.log(response);
-            navigate('/home');
-          })
-          .catch((error)=>{
-            console.log(error);
-          });
-		  	  
-  }
+    e.preventDefault();
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:8000/api/login');
+    xhr.withCredentials = true;
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText);
+        console.log(response);
+        navigate('/home');
+      } else {
+        console.log('Error:', xhr.status);
+      }
+    }
+    };
+    xhr.send(JSON.stringify({ name: name, studentid: studentID }));}
     return (
       <div className="login-container">
         <br></br><h1> Login</h1>
