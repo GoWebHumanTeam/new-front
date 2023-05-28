@@ -1,0 +1,101 @@
+.outer {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+/*화면에서 스크롤바 안보이게 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.inner {
+    height: 100vh;
+    width: 130%;
+    color: white
+}
+
+.about-us {
+    margin-top: 20px;
+    margin-left: 3%;
+}
+
+.about-us-imgs-container {
+    position: relative;
+    width: 520%;
+    height: 60%;
+}
+
+.about-us-imgs {
+    position: relative;
+    width: 550%;
+    height: 70%;
+    display: flex;
+
+}
+
+.about-drone {
+    margin-top: 170px;
+    display:flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+
+.drone_img_mouse_enter {
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    filter: brightness(50%); 
+}
+
+.drone_img_mouse_leave {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.white_img {
+    position: relative;
+    display: inline-block;
+    width: 855px;
+    height: 57%;
+    border-radius: 12px;
+    background-image: url('../../imgs/white_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+
+.white_img_drone {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    top: 50%;
+    left: -260px;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    filter: drop-shadow(5px 5px 8px #000);
+}
+  
+.white_img_txt {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: black;
+}
+
+.td-style {
+    border-bottom: 1px solid #b7b0b0;
+    padding: 3px;
+}

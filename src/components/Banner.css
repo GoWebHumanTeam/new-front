@@ -1,0 +1,95 @@
+.banner {
+    height: 80px;
+    display:flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.banner_logo {
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+}
+
+.banner_search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.banner_searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.banner_searchIcon {
+    background-color: #979591;
+    padding: 5px;
+    height: 15px;
+}
+
+.banner_nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.banner_option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.banner_option_line_1 {
+    font-size: 11px;
+}
+
+.banner_option_line_2 {
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 3px;
+}
+
+.banner_option_basket {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.banner_option_line_2_basketCount {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.banner_button-big {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9e9fa181;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .banner_button-small {
+    display: inline-block;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9e9fa181;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }

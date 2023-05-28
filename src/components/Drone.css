@@ -1,0 +1,40 @@
+.drone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 15px;
+    padding: 20px;
+    width: 60%;
+    max-height: 200px;
+    min-width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    z-index: 1;   
+    mask-image: linear-gradient(to top, rgba(0,0,0,0) rgba(0,0,0,1));
+}
+
+/*
+.mouse_overed {
+
+}
+*/
+
+.drone_rating {
+    display: flex;
+}
+
+.drone > img {
+    max-height: 200px;
+    object-fit: contatin;
+    margin-bottom: 15px;
+}
+
+.drone_price {
+    margin-top: 10px;
+}
+
+.drone_info {
+    height: 100px;
+    margin-bottom: 15px;
+}

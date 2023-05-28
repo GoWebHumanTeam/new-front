@@ -1,0 +1,88 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.center-container {
+  text-align: center;
+  background-image: url('../../imgs/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background-color: #f5f5f5;
+}
+
+.page {
+  border: 4px solid rgb(218, 218, 218);
+  width: 700px;
+  padding: 20px;
+  margin: 0 100px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.check {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.droneshape {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.info,
+.delivery-info,
+.details {
+  border: 4px solid gray;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.info h3,
+.delivery-info h3,
+.details h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.home-button {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.house {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.page button {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px 30px;
+  cursor: pointer;
+  
+}
+
+.page button:hover {
+  background-color: #cccccc;
+}

@@ -1,0 +1,12 @@
+.list-container {
+    text-align: center;
+    background-image: url('../../imgs/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    background-color: #f5f5f5;
+  }
